@@ -1,0 +1,28 @@
+{
+  "bookmarks" : {
+    "-KE-NI-AQIM8L3ZC8_Ek" : {
+      "category" : "Development",
+      "title" : "Real-Time Analytics Dashboard",
+      "url" : "http://coligo.io/real-time-analytics-with-nodejs-socketio-vuejs/"
+    },
+    "-KE-Od9opi-E7KvvG-LG" : {
+      "category" : "Development",
+      "title" : "Building Large-Scale Apps - VueJs",
+      "url" : "http://vuejs.org/guide/application.html"
+    },
+    "-KE-OzR79eW51MP6B-B_" : {
+      "category" : "Development",
+      "title" : "Firebase Web Quickstart",
+      "url" : "https://www.firebase.com/docs/web/quickstart.html"
+    },
+    "-KE-P94aT_jmOfUJWEJX" : {
+      "category" : "Development",
+      "title" : "Get started with Electron",
+      "url" : "http://electron.atom.io/"
+    }
+  },
+  "categories" : {
+    "Development" : "blue",
+    "Design" : "purple"
+  }
+}

@@ -2,7 +2,7 @@
   <div id="links-container">
     <div id="toolbar">
       <div class="ui inverted icon fluid input">
-        <input v-model="query" type="text" placeholder="Cari bookmark link" />
+        <input v-model="query" type="text" placeholder="Cari Bookmark...">
         <i class="search icon"></i>
       </div>
     </div>
@@ -23,9 +23,10 @@
   import { filterByTitle } from '../filters'
 
   export default {
-    data() {
+
+    data () {
       return {
-        query:''
+        query: ''
       }
     },
 
@@ -38,5 +39,7 @@
     filters: {
       filterByTitle
     }
+
   }
+
 </script>

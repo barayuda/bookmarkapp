@@ -1,7 +1,7 @@
 <template>
   <div @click="openLink" class="item">
     <div class="content">
-      <i @click.stop="deleteBookmark" class="icon remote right-float"></i>
+      <i @click.stop="deleteBookmark" class="icon remove right-float"></i>
       <a class="header">{{title}}</a>
       <div class="description">
         {{url}}
@@ -16,16 +16,17 @@
   import store from '../store'
 
   export default {
-    props: ['id','title','url','category','categoryColor'],
+    props: ['id', 'title', 'url', 'category', 'categoryColor'],
 
     methods: {
-      deleteBookmark() {
+      deleteBookmark () {
         store.deleteBookmark(this.id)
       },
 
-      openLink() {
+      openLink () {
         shell.openExternal(this.url)
       }
     }
+
   }
 </script>

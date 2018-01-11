@@ -2,10 +2,10 @@
   <div>
     <div id="categories">
       <div id="cat-header">
-        <h2><i class="bookmark-icon"></i>Bookmark App</h2>
+        <h2><i class="bookmark icon"></i>Bookmark App</h2>
       </div>
       <div class="container">
-        <h2>Categories
+        <h2>Kategori
           <span class="clickable right-float">
             <i @click="addCategory" class="add icon"></i>
           </span>
@@ -20,15 +20,18 @@
           <div v-for="(name, color) in categories" class="item clickable">
             <div class="content">
               <a class="ui {{ color }} empty circular label"></a>
-              <span @click="categorySelected"
+              <span @click="categorySelected(name)"
                 :class="{selected: selectedCategory === name}">
+                {{ name }}
               </span>
               <i v-if="name !== 'Uncategorized'" class="remove icon right-float"
-                @click="deleteCategory(name)"></i>
+                @click="deleteCategory(name)">
+              </i>
             </div>
           </div>
         </div>
-        <button @click="addBookmark" class="ui grey inverted basic icon circular button right-float">
+        <button @click="addBookmark"
+          class="ui grey inverted basic icon circular button right-float">
           <i class="icon add"></i>
         </button>
       </div>
@@ -38,13 +41,15 @@
   </div>
 </template>
 
+
 <script>
   import store from '../store'
   import CategoryModal from './CategoryModal.vue'
   import BookmarkModal from './BookmarkModal.vue'
 
   export default {
-    data() {
+
+    data () {
       return {
         selectedCategory: ''
       }
@@ -58,22 +63,25 @@
     },
 
     methods: {
-      addBookmark() {
+
+      addBookmark () {
         this.$broadcast('add-bookmark')
       },
 
-      addCategory() {
-        this.$boardcast('add-category')
-      }
+      addCategory () {
+        this.$broadcast('add-category')
+      },
 
-      deleteCategory(category) {
+      deleteCategory (category) {
         store.deleteCategory(category)
-      }
+      },
 
-      categorySelected(category) {
+      categorySelected (category) {
         this.selectedCategory = category
         this.$dispatch('category-selected', category)
       }
+
     }
+
   }
 </script>

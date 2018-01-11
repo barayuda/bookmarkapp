@@ -1,31 +1,31 @@
 <template>
-  <!-- template untuk komponen -->
   <div id="app">
     <sidebar
       :categories="categories"
       v-on:category-selected="setSelectedCategory">
+      <!-- bind 'selected-category event to the event handler setSelectedCategory' -->
     </sidebar>
     <bookmark-list
-      :bookmarks="bookmarks | filterByCategory setSelectedCategory"
+      :bookmarks="bookmarks | filterByCategory selectedCategory"
       :categories="categories">
     </bookmark-list>
   </div>
 </template>
 
 <script>
-  // logic
   import store from './store'
   import Sidebar from './components/Sidebar.vue'
   import BookmarkList from './components/BookmarkList.vue'
   import { filterByCategory } from './filters'
 
   export default {
+
     components: {
       Sidebar,
       BookmarkList
     },
 
-    data() {
+    data () {
       return {
         categories: {},
         bookmarks: {},
@@ -37,14 +37,12 @@
       filterByCategory
     },
 
-    created() {
-      //do something after creating vue instance
-      // assign event handler `updateListings` ke `data-updated`
-      store.on('data-updated', this.updatedListings)
+    created () {
+      store.on('data-updated', this.updateListings)
     },
 
     methods: {
-      updateListings(categories, bookmarks) {
+      updateListings (categories, bookmarks) {
         this.categories = categories
         this.bookmarks = bookmarks
       },
@@ -52,6 +50,8 @@
       setSelectedCategory (category) {
         this.selectedCategory = category;
       }
+
     }
+
   }
 </script>

@@ -3,11 +3,8 @@ export function filterByTitle (value, title) {
 }
 
 export function filterByCategory (value, category) {
-  if (!category) {
-    return value;
-  } else {
-    return filterBookmarks(value, 'category', category)
-  }
+  if (!category) return value
+  return filterBookmarks(value, 'category', category)
 }
 
 function filterBookmarks (bookmarks, filterBy, filterValue) {

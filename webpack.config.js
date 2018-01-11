@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   entry: './app/main.js',
@@ -9,10 +9,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      /*
-        Setting untuk vue dan babel, ini untuk memberi tau
-        webpack untuk memproses extensi file vue dan js
-      */
       {
         test: /\.vue$/,
         loader: 'vue'
@@ -25,12 +21,10 @@ module.exports = {
     ]
   },
   babel: {
-    // infokan ke webpack, metode nulis dengan ES2015
     "presets": ["es2015"],
-    "plugins":["transform-runtime"]
+    "plugins": ["transform-runtime"]
   },
   plugins: [
-    // infokan ke webpack, klo saya pakai electron
     new webpack.ExternalsPlugin('commonjs', [
       'electron'
     ])

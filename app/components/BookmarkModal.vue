@@ -9,21 +9,19 @@
 
       <form class="ui form">
         <div class="field">
-          <label>Judul Bookmark</label>
-          <input v-model="bookmarkTitle" type="text" placeholder="Masukan judul bookmark" />
+          <label>Nama Bookmark</label>
+          <input v-model="bookmarkTitle" type="text" placeholder="Tulis nama bookmark...">
         </div>
         <div class="field">
-          <label>URL Bookmark</label>
-          <input v-model="bookmarkUrl" type="text" placeholder="Masukan URL bookmark" />
+          <label>URL</label>
+          <input v-model="bookmarkUrl" type="text" placeholder="Masukkan URL bookmark...">
         </div>
         <div class="field">
           <label>Kategori</label>
           <select v-model="bookmarkCategory" class="ui simple dropdown">
-            <option value="">Pilih kategori</option>
+            <option value="">Select a category</option>
             <template v-for="(name, color) in categories">
-              <option value="{{name}}">
-                {{ name }}
-              </option>
+              <option value="{{ name }}">{{ name }}</option>
             </template>
           </select>
         </div>
@@ -31,20 +29,18 @@
 
     </div>
     <div class="actions">
-      <div @click="addBookmark" class="ui inverted purple button">
-        Simpan
-      </div>
+      <div @click="addBookmark" class="ui inverted purple button">Simpan</div>
     </div>
   </div>
 
 </template>
 
-
 <script>
   import store from '../store'
 
   export default {
-    data() {
+
+    data () {
       return {
         bookmarkTitle: '',
         bookmarkUrl: '',
@@ -55,7 +51,8 @@
     props: ['categories'],
 
     methods: {
-      addBookmark() {
+
+      addBookmark () {
         const newBookmark = {
           title: this.bookmarkTitle,
           url: this.bookmarkUrl,
@@ -64,13 +61,17 @@
         store.addBookmark(newBookmark)
         $('#bookmark-modal').modal('hide')
       }
+
     },
 
     events: {
-      'add-category': function( {
+
+      'add-bookmark': function () {
         this.bookmarkTitle = this.bookmarkUrl = this.bookmarkCategory = ''
         $('#bookmark-modal').modal('show')
       }
+
     }
+
   }
 </script>

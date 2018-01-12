@@ -12,7 +12,7 @@
     "firebase",
     "bookmark"
   ],
-  "author": "Fady Makram",
+  "author": "Barayuda Gautama",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.7.4",

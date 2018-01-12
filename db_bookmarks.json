@@ -1,28 +1,45 @@
 {
   "bookmarks" : {
-    "-KE-NI-AQIM8L3ZC8_Ek" : {
-      "category" : "Development",
-      "title" : "Real-Time Analytics Dashboard",
-      "url" : "http://coligo.io/real-time-analytics-with-nodejs-socketio-vuejs/"
+    "-L2Zrmvc4-JuB-ryEVeM" : {
+      "category" : "Leaning",
+      "title" : "Udemy",
+      "url" : "https://udemy.com"
     },
-    "-KE-Od9opi-E7KvvG-LG" : {
+    "-L2bsjLrye6MWKD0gWHk" : {
       "category" : "Development",
-      "title" : "Building Large-Scale Apps - VueJs",
+      "title" : "a JavaScript runtime built on Chrome's V8 JavaSript Engine",
+      "url" : "https://nodejs.org"
+    },
+    "-L2bsvTLo8XfCfVkwl9u" : {
+      "category" : "Development",
+      "title" : "VueJS Guide",
       "url" : "http://vuejs.org/guide/application.html"
     },
-    "-KE-OzR79eW51MP6B-B_" : {
+    "-L2bt3MTU_5Yl0SMMb6X" : {
       "category" : "Development",
-      "title" : "Firebase Web Quickstart",
+      "title" : "Get Started with Electron",
+      "url" : "http://electron.atom.io/"
+    },
+    "-L2btClc9Abl2_V4yIQ3" : {
+      "category" : "Design",
+      "title" : "Freebie Supply",
+      "url" : "https://freebiesupply.com/"
+    },
+    "-L2btLwaSufMIGx4uoWf" : {
+      "category" : "Development",
+      "title" : "Firebase Docs",
       "url" : "https://www.firebase.com/docs/web/quickstart.html"
     },
-    "-KE-P94aT_jmOfUJWEJX" : {
-      "category" : "Development",
-      "title" : "Get started with Electron",
-      "url" : "http://electron.atom.io/"
+    "-L2btT_xjTVlz1vat7Mv" : {
+      "category" : "Uncategorized",
+      "title" : "AMPPS Stack",
+      "url" : "http://www.ampps.com/"
     }
   },
   "categories" : {
+    "Design" : "purple",
     "Development" : "blue",
-    "Design" : "purple"
+    "Leaning" : "red",
+    "Uncategorized" : "white"
   }
 }
